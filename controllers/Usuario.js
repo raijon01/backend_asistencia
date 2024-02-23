@@ -107,10 +107,31 @@ const crearV = async(req,res) =>{
         })  
     };
 }
+const pedirVentas=async(req,res)=>{
+
+    const listaVentasSinPopulate= await Ventas.find()
+    //const listaVentasConPopulate= await Ventas.find().populate('Cliente','Nombre')
+    const listaVentasConPopulate= await Ventas.find().populate({path:'Cliente',select:'Nombre',select:'-__v'})
+
+    try{
+        return (
+            res.json({
+                metodo1:"sin populate",
+                message1:listaVentasSinPopulate,
+                metodo2:"con populate",
+                message2:listaVentasConPopulate,
+            })
+        )
+    }catch{
+        return res.json("sin respuesta")
+    }
+
+}
 module.exports = {
     crearP,
     crearB,
     crearC,
     crearV,
-    prueba
+    prueba,
+    pedirVentas
 }

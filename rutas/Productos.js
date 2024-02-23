@@ -14,6 +14,7 @@ router.post("/crearB", UsuarioControlador.crearB)
 router.post("/crearC", UsuarioControlador.crearC)
 router.post("/crearV", UsuarioControlador.crearV)
 router.post("/prueba", UsuarioControlador.prueba)
+router.get("/pedirventa",UsuarioControlador.pedirVentas)
 
 
 
