@@ -4,6 +4,7 @@
 const express= require("express");
 const UsuarioControlador = require("../controllers/Usuario");
 const router=express.Router();
+const check=require("../middlewares/Auth")
 
 
 
@@ -14,8 +15,8 @@ router.post("/crearB", UsuarioControlador.crearB)
 router.post("/crearC", UsuarioControlador.crearC)
 router.post("/crearV", UsuarioControlador.crearV)
 router.post("/prueba", UsuarioControlador.prueba)
-router.get("/pedirventa",UsuarioControlador.pedirVentas)
-
+router.get("/pedirventa",check.auth,UsuarioControlador.pedirVentas)
+router.post("/login",UsuarioControlador.login)
 
 
 

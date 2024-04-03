@@ -5,7 +5,7 @@ const Precios=require("../models/Precios")
 const Bioequivalentes=require("../models/Bioequivalentes")
 const Clientes=require("../models/Clientes")
 const Ventas=require("../models/Ventas")
-const { error } = require("console")
+const jwt=require("../services/jwt")
 
 const prueba=(req,res)=>{
     return res.json(
@@ -127,11 +127,34 @@ const pedirVentas=async(req,res)=>{
     }
 
 }
+const login=async(req,res)=>{
+    let validado=false
+    let params=req.body
+    //const usuario=await Clientes.findOne({email:params.email}).select({"password":0})
+    const usuario=await Clientes.findOne({email:params.email})
+    if (usuario.Contraseña==params.Contraseña){
+        validado=true
+    }
+    /* (usuario.Contraseña==params.Contraseña ? validado=true : validado=false) */
+    if (validado==true) {
+        let token=jwt.createToken(usuario)
+        return res.json({
+            message:"validado",
+            personaje:usuario,
+            token:token
+        })
+    }else{
+        return res.json({
+            message:"no validado",
+        })      
+    }
+}
 module.exports = {
     crearP,
     crearB,
     crearC,
     crearV,
     prueba,
-    pedirVentas
+    pedirVentas,
+    login
 }
