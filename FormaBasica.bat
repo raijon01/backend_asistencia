@@ -8,3 +8,7 @@ start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\BackendTrabajo & git add 
 start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\FrontWebAsistencia & git add . & git commit -m %mensajefrontweb% & git push origin main" 
 start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\FrontCelular & git add . & git commit -m %mensajefrontmobile% & git push origin main" 
 start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\elbueno & git add . & git commit -m %mensajeelbueno% & git push origin main" 
+start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\apirestsocial & git add . & git commit -m %mensajefrontmobile% & git push origin main" 
+start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\17-proyecto4 & git add . & git commit -m %mensajeelbueno% & git push origin main" 
+start cmd.exe /k "cd C:\Users\nicolas\Desktop\TypeScript\clase-typescript & git add . & git commit -m %mensajeelbueno% & git push origin main" 
+start cmd.exe /k "cd C:\Users\nicolas\Desktop\TypeScript\AwesomeTSProject & git add . & git commit -m %mensajeelbueno% & git push origin main" 
