@@ -128,6 +128,7 @@ const pedirVentas=async(req,res)=>{
     }
 
 }
+//Revisar
 const login=async(req,res)=>{
     let validado=false
     let params=req.body

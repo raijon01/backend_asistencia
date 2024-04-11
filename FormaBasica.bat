@@ -14,5 +14,5 @@ start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\FrontCelular & git add . 
 start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\elbueno & git add . & git commit -m %mensajeelbueno% & git push origin main" 
 start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\apirestsocial & git add . & git commit -m %mensajeapirest% & git push origin main" 
 start cmd.exe /k "cd C:\Users\nicolas\Desktop\BACKNODE\17-proyecto4 & git add . & git commit -m %mensajeproy4% & git push origin main" 
-start cmd.exe /k "cd C:\Users\nicolas\Desktop\TypeScript\clase-typescript & git add . & git commit -m %mensajeclasetypescr% & git push origin main" 
+:: start cmd.exe /k "cd C:\Users\nicolas\Desktop\TypeScript\clase-typescript & git add . & git commit -m %mensajeclasetypescr% & git push origin main" 
 start cmd.exe /k "cd C:\Users\nicolas\Desktop\TypeScript\AwesomeTSProject & git add . & git commit -m %mensajeawesomeTSProje% & git push origin main" 
